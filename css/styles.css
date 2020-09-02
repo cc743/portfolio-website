@@ -1,0 +1,291 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+Tertiary Color (Teal): #05646e
+Greensih Color (Aquamarine): #489c79
+ */
+
+ :root{
+   --primary-color: #357b70;
+   --secondary-color: #e0b354;
+   --dark-grey: #2b2b2b;
+   --tertiary-color: #05676e;
+   --greenish-color: #489c79;
+   --ronchi-yellow: #edc655;
+   --light-yellow: #fcffad;
+   --dark-orange: #f76414;
+
+   --primary-font-weight: 650;
+   --primary-padding: 20px;
+   --secondary-padding: 10px;
+   --primary-width: 100%;
+ }
+
+body {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: var(--primary-font-weight);
+}
+
+h2{
+  font-size: 24px;
+  font-weight: var(--primary-font-weight);
+}
+
+h3{
+  font-size: 18px;
+  font-weight: var(--primary-font-weight);
+}
+
+a{
+  color: var(--primary-color);
+}
+
+a:visited{
+  color: var(--tertiary-color);
+}
+
+a:hover, a:focus{
+  text-decoration: none; /*No underlining when hovering over a link*/
+}
+
+a:active{
+  color: var(--greenish-color);
+}
+
+button{
+  border: none;  /* overwrites browser defaults and resets the border */
+  font-family: inherit;  /* takes the font from the outer container */
+  background-color: var(--primary-color);  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  color: white;
+  text-decoration: none;
+  padding: var(--secondary-padding);  /*adds spacing to the button (this will be discussed more in-depth later) */
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3)  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+
+button,
+.button{
+  /*overwrites browser defaults and resets the border*/
+  border: none;
+  display: inline-block;
+  /*takes the font from the outer container*/
+  font-family: inherit;
+  /*styles the button*/
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: var(--secondary-padding);
+  border-radius: 3px;
+  /*width of the border, type, color*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus{
+  /*lets the mouse appear as a hand when hovering over the button*/
+  curson: pointer;
+  /*reduces the opacity of the button to 80%*/
+  opacity: 0.8;
+}
+
+.navigation-list__item--active{
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-header{
+  display: flex;
+  width: var(--primary-width);
+  padding: var(--primary-padding);
+  border-bottom: 1px solid red;
+}
+
+/*aligning the page body to the page header*/
+.page-body{
+  display: flex;
+  width: var(--primary-width);
+  padding: var(--primary-padding);
+}
+
+.page-body__item{
+  position: relative;
+  left: var(--primary-padding);
+}
+
+.page-buttons{
+  display: flex;
+  width: var(--primary-width);
+  padding: var(--primary-padding);
+}
+
+.page-header__item{
+  flex: 0 1 150px;
+}
+
+.page-header__item:last-child{
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list li{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.page-footer{
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-aboutme{            /*is it possible to use flexbox to code this part?*/
+  position: relative;
+  left: var(--primary-padding);
+  text-align: center;
+}
+
+.page-table{
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info{
+  position: relative;
+  top: var(--primary-padding);
+  left: var(--primary-padding);
+}
+
+.contact-form{
+  position: relative;
+  top: var(--primary-padding);
+  left: var(--primary-padding);
+}
+
+.aboutme-list{
+  list-style-type: none;
+}
+
+.aboutme-button{
+  text-align: center;
+}
+
+.city-section{
+  text-align: center;
+}
+
+.page-gridsection{
+  display: flex;
+  flex-direction: column;
+  width: var(--primary-width);
+  padding: var(--primary-padding);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--primary-padding);
+}
+
+.grid__item{
+  background-color: lightgray;
+}
+
+@media all and (max-width: 500px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px){
+  .grid{
+    grid-gap: var(--secondary-padding);
+  }
+
+  .grid__item:last-child{
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change{
+  0%{
+    fill: var(--ronchi-yellow);  /*Note that _fill_ is a specific CSS property that only applies to SVGs*/
+  }
+
+  50%{
+    fill: var(--light-yellow);
+  }
+
+  100%{
+    fill: var(--dark-orange);
+  }
+}
+
+.sun{
+  animation: 4s color-change infinite alternate linear; /*properties in order: animation-duration, animation-name, animation-iteration-count, animation-direction, animation-timing-function*/
+}
+
+@keyframes cloud-move{
+  from{
+    transform: translate(0, 50px);
+  }
+
+  to{
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front{
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse{
+  from{
+    transform: translate(446px, 48px);
+  }
+
+  to{
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back{
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
