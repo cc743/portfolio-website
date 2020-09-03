@@ -215,6 +215,7 @@ button:focus,
 
 .grid__item{
   background-color: lightgray;
+  padding: 5px;
 }
 
 @media all and (max-width: 500px){
