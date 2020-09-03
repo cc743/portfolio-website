@@ -131,6 +131,7 @@ button:focus,
   display: flex;
   width: var(--primary-width);
   padding: var(--primary-padding);
+  justify-content: center;
 }
 
 .page-body__item{
@@ -142,6 +143,7 @@ button:focus,
   display: flex;
   width: var(--primary-width);
   padding: var(--primary-padding);
+  justify-content: center;
 }
 
 .page-header__item{

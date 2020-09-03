@@ -147,6 +147,7 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  justify-content: center;
 }
 
 .page-body__item{
@@ -160,6 +161,7 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  justify-content: center;
 }
 
 .page-header__item{
