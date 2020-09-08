@@ -59,7 +59,7 @@ a:hover, a:focus{
 }
 
 a:active{
-  color: var(--greenish-color);
+  color: var(--greenish-color); 
 }
 
 button{
