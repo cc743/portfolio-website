@@ -117,7 +117,7 @@ button:focus,
 .button:hover,
 .button:focus{
   /*lets the mouse appear as a hand when hovering over the button*/
-  curson: pointer;
+  cursor: pointer;
   /*reduces the opacity of the button to 80%*/
   opacity: 0.8;
 }
