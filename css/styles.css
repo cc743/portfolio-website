@@ -106,7 +106,7 @@ button:focus,
 .button:hover,
 .button:focus{
   /*lets the mouse appear as a hand when hovering over the button*/
-  curson: pointer;
+  cursor: pointer;
   /*reduces the opacity of the button to 80%*/
   opacity: 0.8;
 }
@@ -135,8 +135,16 @@ button:focus,
 }
 
 .page-body__item{
+  margin: auto;
   position: relative;
   left: var(--primary-padding);
+  text-align: center;
+}
+
+.proj-body__item{
+  margin: auto;
+  position: relative;
+  left: 20px;
 }
 
 .page-buttons{
@@ -218,77 +226,4 @@ button:focus,
 .grid__item{
   background-color: lightgray;
   padding: 5px;
-}
-
-@media all and (max-width: 500px){
-  .grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px){
-  .grid{
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media all and (max-width: 750px){
-  .grid{
-    grid-gap: var(--secondary-padding);
-  }
-
-  .grid__item:last-child{
-    grid-column: auto/auto;
-    grid-row: auto/auto;
-  }
-
-  h1{
-    font-size: 22px;
-  }
-}
-
-@keyframes color-change{
-  0%{
-    fill: var(--ronchi-yellow);  /*Note that _fill_ is a specific CSS property that only applies to SVGs*/
-  }
-
-  50%{
-    fill: var(--light-yellow);
-  }
-
-  100%{
-    fill: var(--dark-orange);
-  }
-}
-
-.sun{
-  animation: 4s color-change infinite alternate linear; /*properties in order: animation-duration, animation-name, animation-iteration-count, animation-direction, animation-timing-function*/
-}
-
-@keyframes cloud-move{
-  from{
-    transform: translate(0, 50px);
-  }
-
-  to{
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front{
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse{
-  from{
-    transform: translate(446px, 48px);
-  }
-
-  to{
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back{
-  animation: 34s cloud-move-reverse infinite alternate linear;
 }
