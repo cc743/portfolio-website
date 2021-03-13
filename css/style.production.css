@@ -203,7 +203,6 @@ button:focus,
 
 .page-aboutme{            /*is it possible to use flexbox to code this part?*/
   position: relative;
-  left: 20px;
   text-align: center;
 }
 
