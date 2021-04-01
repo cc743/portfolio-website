@@ -112,6 +112,24 @@ button{
   transition: 0.2s opacity;
 }
 
+.resume-button{
+  border: none;
+  display: inline-block;
+  /*takes the font from the outer container*/
+  font-family: inherit;
+  /*styles the button*/
+  background-color: #c5bbbb;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /*width of the border, type, color*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
 button:hover,
 button:focus,
 .button:hover,
